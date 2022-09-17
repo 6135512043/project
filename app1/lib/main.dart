@@ -1,6 +1,7 @@
-import 'package:app1/login.dart';
+//import 'package:app1/login.dart';
 import 'package:app1/route.dart';
 import 'package:flutter/material.dart';
+import 'package:app1/Welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
       ),
       routes: routes,
-      home:login()
+      home: Welcome()
     );
   }
 }

@@ -23,10 +23,14 @@ class _HomeState extends State<Home> {
             auth.signOut().then((value) {
                 MaterialPageRoute route = MaterialPageRoute(
                   builder: (context) => login(),
+                
                 );
                 Navigator.pushAndRemoveUntil(context, route, (route) => false);
               });
-          }, child: Text("Logout")),
+          }, 
+          child: Text("Logout")),
+          
+          
         ),
       ),
     );

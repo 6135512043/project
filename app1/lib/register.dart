@@ -35,7 +35,7 @@ class _RegisterState extends State<Register> {
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Color.fromARGB(255, 160, 58, 190),
-                title: Text('Register'),
+                title: Text('REGISTER'),
               ),
               body: SingleChildScrollView(
                 child: Container(
@@ -74,7 +74,7 @@ class _RegisterState extends State<Register> {
                                   labelText: "Password")),
                           SizedBox(
                             child: ElevatedButton(
-                              child: Text('ลงทะเบียน'),
+                              child: Text('Register'),
                               onPressed: () async {
                                 if (_formKey.currentState!.validate()) {
                                   _formKey.currentState!.save();
@@ -86,7 +86,7 @@ class _RegisterState extends State<Register> {
                                     )
                                         .then((value) {
                                       Fluttertoast.showToast(
-                                        msg: "สร้างบัญชีเรียบร้อย",
+                                        msg: "Successful registration",
                                         gravity: ToastGravity.CENTER,
                                       );
 

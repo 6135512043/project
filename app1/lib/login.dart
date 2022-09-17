@@ -47,7 +47,7 @@ class _loginState extends State<login> {
                           key: _formKey,
                           child: Column(children: [
                             Image.network(
-                              "https://cdn-icons-png.flaticon.com/512/7302/7302946.png",
+                              "https://cdn-icons-png.flaticon.com/512/4213/4213147.png",
                               height: 200,
                               width: 150,
                             ),
@@ -86,7 +86,7 @@ class _loginState extends State<login> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 ElevatedButton(
-                                    child: Text("Log In!"),
+                                    child: Text("Login"),
                                     onPressed: () async {
                                      if (_formKey.currentState!.validate()) {
                                        _formKey.currentState!.save();
