@@ -1,359 +1,115 @@
-// import 'package:app1/login.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:app1/register.dart';
-// import 'package:flutter_flow_theme.dart';
+import 'package:app1/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:app1/register.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/widgets.dart';
 
-class Welcome extends StatefulWidget {
-  const Welcome({Key? key}) : super(key: key);
+
+class HomePageWidget extends StatefulWidget {
+  const HomePageWidget({Key? key}) : super(key: key);
 
   @override
-  State<Welcome> createState() => _welcomeState();
+  _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
-  class _welcomeState extends State <Welcome> {
-     @override
-     Widget build(BuildContext context) {
+class _HomePageWidgetState extends State<HomePageWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
-      return Scaffold(
-            key: scaffoldKey,
-            appBar: AppBar(
-              backgroundColor: Color(0xFFF1676A),
-            automaticallyImplyLeading: false,
-            title: Text(
-            'Home',
-            textAlign: TextAlign.center,
-            style: FlutterFlowTheme.of(context).bodyText1.override(
-            fontFamily: 'Poppins',
-            color: FlutterFlowTheme.of(context).primaryBtnText,
-            fontSize: 30,
-          ),
-                      ),
-    actions: [],
-    centerTitle: false,
-    elevation: 2,
-  ),
-  backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-  body: SafeArea(
-    child: GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
-      child: Stack(
-        children: [
-          Align(
-            alignment: AlignmentDirectional(0, 0.48),
-            child: ListView(
-              padding: EdgeInsets.zero,
-              primary: false,
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Color.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 8, 4, 8),
-                          child: Container(
-                            width: 4,
-                            height: 90,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFF72D30),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 4, 0, 0),
-                                child: Text(
-                                  'Logout',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFFF72D30),
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Color.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Align(
-            alignment: AlignmentDirectional(-3.61, -1.17),
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [],
-              ),
-            ),
-          ),
-          Align(
-            alignment: AlignmentDirectional(0, -0.78),
-            child: ListView(
-              padding: EdgeInsets.zero,
-              primary: false,
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 8, 4, 8),
-                          child: Container(
-                            width: 4,
-                            height: 90,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF4B39EF),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 4, 0, 0),
-                                child: Text(
-                                  'Shopping',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF4B39EF),
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 8, 4, 8),
-                          child: Container(
-                            width: 4,
-                            height: 90,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF39D2C0),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 4, 0, 0),
-                                child: Text(
-                                  'Setting',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF39D2C0),
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 3,
-                          color: Color(0x25000000),
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 8, 4, 8),
-                          child: Container(
-                            width: 4,
-                            height: 90,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFEE8B60),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(12, 12, 16, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 4, 0, 0),
-                                child: Text(
-                                  'Login',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFFEE8B60),
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+  get height => null;
+
+    Widget ShoppingButton(){
+      return SizedBox(
+        child: RaisedButton(color: Colors.purple.shade700,
+          child: Text('Shopping',style: TextStyle(color: Colors.white),),
+          onPressed: (){
+          },
+          
+        ),
+      );
+    }
+
+Widget LoginButton(){
+  return SizedBox(
+    child: OutlineButton(color: Colors.yellow.shade300,
+      child: Text('Login',style: TextStyle(color: Colors.black),),
+      onPressed:(){
+        Navigator.pushNamed(context, '/login');
+      },
     ),
-  ),
-)
-
-
-     } 
+  );
 }
 
-class FlutterFlowTheme {
+
+    Widget SettingButton(){
+      return SizedBox(
+        child: RaisedButton(color: Colors.green.shade700,
+          child: Text('Setting',style: TextStyle(color: Colors.white),),
+          onPressed: (){},
+        ),
+      );
+    }
+
+    Widget LogoutButton(){
+      return SizedBox(
+        child: OutlineButton(color: Color.fromARGB(255, 42, 185, 162),
+        child: Text('Logout',style: TextStyle(color: Colors.black),),
+        onPressed:(){
+        Navigator.pushNamed(context, '/home');
+      },
+    ),
+  );
 }
 
+ Widget showButton(){
+  return Row(mainAxisSize:MainAxisSize.min ,
+    children: <Widget>[
+      ShoppingButton(),
+      SizedBox(
+        width: 50.0,
+        height: 50.0,
+      ),
+    LoginButton()],
+    );
+ }
+
+Widget showButton1(){
+  return Row(mainAxisSize:MainAxisSize.min ,
+    children: <Widget>[
+      SettingButton(),
+      SizedBox(
+        width: 50.0,
+        height: 50.0,
+      ),
+    LogoutButton()],
+    );
+ }
 
 
   @override
-  State<StatefulWidget> createState() {
-    TODO: implement createState
-    throw UnimplementedError();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Home"),
+      backgroundColor: Colors.red.shade300,),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Image.network(
+               "https://cdn-icons-png.flaticon.com/512/4213/4213147.png",
+                height: 200,
+               width: 150,
+               ),
+              showButton(),
+              SizedBox(
+                height: 30.0,),
+              showButton1(),
+            ],
+            ),
+            ),
+          ),
+    );
+  }
   }

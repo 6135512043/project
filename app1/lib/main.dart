@@ -1,4 +1,5 @@
 //import 'package:app1/login.dart';
+import 'package:app1/login.dart';
 import 'package:app1/route.dart';
 import 'package:flutter/material.dart';
 import 'package:app1/Welcome.dart';
@@ -15,9 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.pink,
+
       ),
       routes: routes,
-      home: Welcome()
+      //home: login()
+       home: HomePageWidget()
     );
   }
 }
