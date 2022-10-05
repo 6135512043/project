@@ -21,8 +21,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
     Widget ShoppingButton(){
       return SizedBox(
+        width: 170.0,
+        height: 100.0,
         child: RaisedButton(color: Colors.purple.shade700,
-          child: Text('Shopping',style: TextStyle(color: Colors.white),),
+          child: Text('Shopping',style: TextStyle(color: Colors.white,fontSize: 20),),
           onPressed: (){
           },
           
@@ -32,8 +34,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
 Widget LoginButton(){
   return SizedBox(
-    child: OutlineButton(color: Colors.yellow.shade300,
-      child: Text('Login',style: TextStyle(color: Colors.black),),
+    width: 170.0,
+    height: 100.0,
+    child: RaisedButton(color: Colors.green.shade700,
+      child: Text('Login',style: TextStyle(color: Colors.white,fontSize: 25)),
       onPressed:(){
         Navigator.pushNamed(context, '/login');
       },
@@ -44,8 +48,10 @@ Widget LoginButton(){
 
     Widget SettingButton(){
       return SizedBox(
-        child: RaisedButton(color: Colors.green.shade700,
-          child: Text('Setting',style: TextStyle(color: Colors.white),),
+        width: 170.0,
+        height: 100.0,
+        child: RaisedButton(color: Colors.orange.shade700,
+          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){},
         ),
       );
@@ -53,8 +59,10 @@ Widget LoginButton(){
 
     Widget LogoutButton(){
       return SizedBox(
-        child: OutlineButton(color: Color.fromARGB(255, 42, 185, 162),
-        child: Text('Logout',style: TextStyle(color: Colors.black),),
+        width: 170.0,
+        height: 100.0,
+        child: RaisedButton(color: Color.fromARGB(255, 185, 42, 42),
+        child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
         onPressed:(){
         Navigator.pushNamed(context, '/home');
       },
@@ -67,8 +75,8 @@ Widget LoginButton(){
     children: <Widget>[
       ShoppingButton(),
       SizedBox(
-        width: 50.0,
-        height: 50.0,
+        width: 30.0,
+        height: 30.0,
       ),
     LoginButton()],
     );
@@ -79,8 +87,8 @@ Widget showButton1(){
     children: <Widget>[
       SettingButton(),
       SizedBox(
-        width: 50.0,
-        height: 50.0,
+        width: 30.0,
+        height: 30.0,
       ),
     LogoutButton()],
     );
@@ -102,9 +110,12 @@ Widget showButton1(){
                 height: 200,
                width: 150,
                ),
+               SizedBox(
+                height: 40.0,
+               ),
               showButton(),
               SizedBox(
-                height: 30.0,),
+                height: 20.0,),
               showButton1(),
             ],
             ),

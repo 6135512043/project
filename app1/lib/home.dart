@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(title: Text("Logout"),
       backgroundColor: Color.fromARGB(255, 160, 58, 190),
       ),
+      
       body: SingleChildScrollView(
         child: Container(
           child: ElevatedButton(onPressed: (){
@@ -29,7 +30,7 @@ class _HomeState extends State<Home> {
                 Navigator.pushAndRemoveUntil(context, route, (route) => false);
               });
           }, 
-          child: Text("Logout")),
+          child: Text("back to home")),
       
           
           
