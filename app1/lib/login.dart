@@ -1,10 +1,14 @@
+import 'package:app1/Welcome.dart';
+import 'package:app1/Welcome2.dart';
 import 'package:app1/home.dart';
 import 'package:app1/register.dart';
+import 'package:app1/setting.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:app1/Welcome2.dart';
 
 class login extends StatefulWidget {
   const login({ Key? key }) : super(key: key);
@@ -96,7 +100,7 @@ class _loginState extends State<login> {
                                            _formKey.currentState!.reset();
                                             MaterialPageRoute route =
                                                 MaterialPageRoute(
-                                              builder: (context) => Home(),
+                                              builder: (context) => HomePageWidget2(),
                                             );
                                             Navigator.pushAndRemoveUntil(
                                                 context,

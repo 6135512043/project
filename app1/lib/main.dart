@@ -1,6 +1,7 @@
 //import 'package:app1/login.dart';
 import 'package:app1/login.dart';
 import 'package:app1/route.dart';
+import 'package:app1/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:app1/Welcome.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: routes,
       //home: login()
        home: HomePageWidget()
+       //home: Setting()
     );
   }
 }

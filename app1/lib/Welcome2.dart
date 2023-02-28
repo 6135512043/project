@@ -7,16 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/widgets.dart';
 import 'package:app1/shopping.dart';
+import 'package:app1/route.dart';
 
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class HomePageWidget2 extends StatefulWidget {
+  const HomePageWidget2({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _HomePageWidgetState2 createState() => _HomePageWidgetState2();
 }
-
-class _HomePageWidgetState extends State<HomePageWidget> {
+class Profile{
+  var email = "";
+  }
+class _HomePageWidgetState2 extends State<HomePageWidget2> {
+  
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   get height => null;
@@ -98,17 +102,21 @@ Widget showButton1(){
     );
  }
 
-
+final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home"),
+      appBar: AppBar(title: Text("Welcome to Shopping"),
       backgroundColor: Colors.red.shade300,),
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
+            children: <Widget>
+            [
+              /*Text(
+                //auth.currentUser.email,style: TextStyle(fontSize: 25),),
+               */
               Image.network(
                "https://cdn-icons-png.flaticon.com/512/4213/4213147.png",
                 height: 200,
@@ -121,6 +129,7 @@ Widget showButton1(){
               SizedBox(
                 height: 20.0,),
               showButton1(),
+              
             ],
             ),
             ),

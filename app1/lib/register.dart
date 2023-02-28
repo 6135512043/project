@@ -44,6 +44,11 @@ class _RegisterState extends State<Register> {
                       key: _formKey,
                       child: Column(
                         children: [
+                          Image.network(
+                              "https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/user-plus-512.png",
+                              height: 200,
+                              width: 150,
+                            ),
                           TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               validator: (var inValue) {
@@ -69,11 +74,16 @@ class _RegisterState extends State<Register> {
                               onSaved: (var password) {
                                 profile.password = password!;
                               },
+                              
                               decoration: InputDecoration(
                                   
                                   labelText: "Password")),
+                        SizedBox(
+                          height: 20,),
                           SizedBox(
+                            
                             child: ElevatedButton(
+                              
                               child: Text('Register'),
                               onPressed: () async {
                                 if (_formKey.currentState!.validate()) {

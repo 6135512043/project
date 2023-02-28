@@ -21,7 +21,8 @@ class _HomeState extends State<Home> {
       
       body: SingleChildScrollView(
         child: Container(
-          child: ElevatedButton(onPressed: (){
+          child: ElevatedButton
+          (onPressed: (){
             auth.signOut().then((value) {
                 MaterialPageRoute route = MaterialPageRoute(
                   builder: (context) => HomePageWidget(),
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
                 Navigator.pushAndRemoveUntil(context, route, (route) => false);
               });
           }, 
-          child: Text("back to home")),
+          child: Text("back to main page")),
       
           
           
