@@ -27,7 +27,8 @@ class _SettingState extends State<Setting> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Setting'),
-        ),body: SingleChildScrollView(
+        backgroundColor: Color.fromARGB(255, 160, 58, 190,),),
+        body: SingleChildScrollView(
           child: Column(
             children: <Widget>[SizedBox(
               width: 30.0,height:30.0,
@@ -55,9 +56,9 @@ class _SettingState extends State<Setting> {
   Widget saveButton() {
     return Container(
       width: MediaQuery.of(context).size.width,height: 45.0,
-      child: RaisedButton.icon(color: Color.fromARGB(255, 233, 30, 99),
+      child: RaisedButton.icon(color: Color.fromARGB(255, 89, 24, 81),
               onPressed: (){
-                Navigator.pushNamed(context, '/Welcome');
+                Navigator.pushNamed(context, '/welcome');
                 }, 
               icon: Icon(Icons.save,color: Color.fromARGB(255, 255, 255, 255) ,),
               label: Text('Save',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255) ),), 

@@ -107,7 +107,7 @@ final auth = FirebaseAuth.instance;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Welcome to Shopping"),
-      backgroundColor: Colors.red.shade300,),
+      backgroundColor: Color.fromARGB(255, 160, 58, 190,),),
       body: SafeArea(
         child: Center(
           child: Column(

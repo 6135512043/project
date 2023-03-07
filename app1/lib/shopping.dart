@@ -25,8 +25,8 @@ class _ShoppingState extends State<Shopping> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shopping'),
-      ),
+        title: Text('SHOPPING'),
+        backgroundColor: Color.fromARGB(255, 160, 58, 190,),),
       body: SafeArea(
         child:Center(
           child: Column(
@@ -38,7 +38,7 @@ class _ShoppingState extends State<Shopping> {
               ),
               search(),
               SizedBox(
-                height: 50,
+                height: 20,
                 width: 100,
               ),
               camerabutton(),
@@ -89,20 +89,20 @@ class _ShoppingState extends State<Shopping> {
     return SizedBox(
       height: 130,
       width: 450,
-    child: RaisedButton(textColor: Colors.white10,
-    //children: <Widget>[Image.asset("images/s1.jpg"),],
+    child: ElevatedButton(
     child: Row(
     children:[
-      Image.asset("image/s1.png",
-      width: 50,
-      height: 50,
+      Image.asset("images/s1.png",
+      width: 120,
+      height: 120,
       ),
-      Text('crop pink shirt',style: TextStyle(fontSize: 20),),
+      Text('    pink crop shirt',style: TextStyle(fontSize: 25),),
     ],
     ),
     onPressed: (){
       Navigator.pushNamed(context, '/item');
       },
+      style: ElevatedButton.styleFrom(primary: Color.fromARGB(195, 227, 227, 227),onPrimary: Color.fromARGB(255, 0, 0, 0)),
     ),
   );
 }
@@ -111,19 +111,20 @@ Widget product1(){
     return SizedBox(
       height: 130,
       width: 450,
-    child: RaisedButton(textColor: Colors.white10,
+    child: ElevatedButton(
     child: Row(
     children:[
-      Image.asset("image/s2.png",
-      width: 50,
-      height: 50,
+      Image.asset("images/s2.png",
+      width: 120,
+      height: 120,
       ),
-      Text('barbie shirt',style: TextStyle(fontSize: 20),),
+      Text('    barbie crop shirt',style: TextStyle(fontSize: 25),),
     ],
     ),
     onPressed: (){
       Navigator.pushNamed(context, '/item');
       },
+      style: ElevatedButton.styleFrom(primary: Color.fromARGB(195, 227, 227, 227),onPrimary: Color.fromARGB(255, 0, 0, 0)),
     ),
   );
 }

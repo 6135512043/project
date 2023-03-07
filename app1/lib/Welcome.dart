@@ -55,7 +55,7 @@ Widget LoginButton(){
         child: RaisedButton(color: Colors.orange.shade700,
           child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed:(){
-            Navigator.pushNamed(context, '/Setting');
+            Navigator.pushNamed(context, '/relogin');
           },
         ),
       );
@@ -68,7 +68,7 @@ Widget LoginButton(){
         child: RaisedButton(color: Color.fromARGB(255, 185, 42, 42),
         child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
         onPressed:(){
-        Navigator.pushNamed(context, '/home');
+        Navigator.pushNamed(context, '/relogin');
       },
     ),
   );
@@ -103,7 +103,7 @@ Widget showButton1(){
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Home"),
-      backgroundColor: Colors.red.shade300,),
+      backgroundColor: Color.fromARGB(255, 160, 58, 190,),),
       body: SafeArea(
         child: Center(
           child: Column(

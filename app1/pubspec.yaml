@@ -38,6 +38,7 @@ dependencies:
   firebase_auth: ^1.1.0
   fluttertoast: ^8.0.9
   google_maps_flutter: ^2.2.1
+  video_player: ^2.5.1
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,7 @@ flutter:
   assets:
     - images/s1.png
     - images/s2.png
+    - video/vs1.mp4
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
