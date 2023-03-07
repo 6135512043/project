@@ -56,7 +56,10 @@ class _SettingState extends State<Setting> {
   Widget saveButton() {
     return Container(
       width: MediaQuery.of(context).size.width,height: 45.0,
-      child: RaisedButton.icon(color: Color.fromARGB(255, 89, 24, 81),
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(255, 89, 24, 81),
+        ),
               onPressed: (){
                 Navigator.pushNamed(context, '/welcome');
                 }, 

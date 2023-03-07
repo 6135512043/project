@@ -24,7 +24,10 @@ Widget Buttonmain(){
       return SizedBox(
         width: 150.0,
         height: 100.0,
-        child: RaisedButton(color: Color.fromARGB(255, 185, 81, 81),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 185, 81, 81),
+          ),
           child: Text('back',style: TextStyle(color: Colors.white,fontSize: 30),),
           onPressed: (){
             Navigator.pushNamed(context, '/welcome');
@@ -37,7 +40,10 @@ Widget buttonlog(){
       return SizedBox(
         width: 150.0,
         height: 100.0,
-        child: RaisedButton(color: Color.fromARGB(255, 69, 178, 63),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 69, 178, 63),
+          ),
           child: Text('login',style: TextStyle(color: Colors.white,fontSize: 30),
           ),
           onPressed: (){

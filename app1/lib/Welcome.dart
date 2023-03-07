@@ -1,4 +1,6 @@
+import 'package:app1/home.dart';
 import 'package:app1/login.dart';
+import 'package:app1/relogin.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:app1/register.dart';
 import 'package:app1/setting.dart';
@@ -25,10 +27,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Colors.purple.shade700,
-          child: Text('Shopping',style: TextStyle(color: Colors.white,fontSize: 20),),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
           onPressed: (){
-            Navigator.pushNamed(context, '/shopping');
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Shopping(),
+          ));
           },
         ),
       );
@@ -36,15 +45,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
 Widget LoginButton(){
   return SizedBox(
-    width: 170.0,
-    height: 100.0,
-    child: RaisedButton(color: Colors.green.shade700,
-      child: Text('Login',style: TextStyle(color: Colors.white,fontSize: 25)),
-      onPressed:(){
-        Navigator.pushNamed(context, '/login');
-      },
-    ),
-  );
+        width: 170.0,
+        height: 100.0,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 16, 48, 152),
+          ),
+          child: Text('Loin',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => login(),
+          ));
+          },
+        ),
+      );
 }
 
 
@@ -52,10 +68,17 @@ Widget LoginButton(){
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Colors.orange.shade700,
-          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
-          onPressed:(){
-            Navigator.pushNamed(context, '/relogin');
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Relogin(),
+          ));
           },
         ),
       );
@@ -65,13 +88,20 @@ Widget LoginButton(){
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Color.fromARGB(255, 185, 42, 42),
-        child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
-        onPressed:(){
-        Navigator.pushNamed(context, '/relogin');
-      },
-    ),
-  );
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Relogin(),
+          ));
+          },
+        ),
+      );
 }
 
  Widget showButton(){

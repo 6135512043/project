@@ -7,7 +7,6 @@ import 'package:flutter/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:video_player/video_player.dart';
 
-void main() => runApp(const item());
 class item extends StatefulWidget {
 const item({Key? key}) : super(key: key);
   
@@ -19,7 +18,7 @@ class _itemState extends State<item> {
 late VideoPlayerController _controller;
 
 @override
-void _initState(){
+void initState(){
 super.initState();
 _controller = VideoPlayerController.asset('video/vs1.mp4')
 ..initialize().then((_) {
@@ -32,10 +31,14 @@ _controller = VideoPlayerController.asset('video/vs1.mp4')
     return MaterialApp(
         title: 'Item',
         home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 160, 58, 190,),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: Center(
           child:Column(
             children: <Widget>[
+              SizedBox(
+                width: 200,
+                height: 80,
+              ),
           const Text(' '),
           _controller.value.isInitialized
           ?AspectRatio(

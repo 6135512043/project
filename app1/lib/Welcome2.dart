@@ -8,6 +8,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/widgets.dart';
 import 'package:app1/shopping.dart';
 import 'package:app1/route.dart';
+import 'package:app1/home.dart';
 
 
 class HomePageWidget2 extends StatefulWidget {
@@ -25,14 +26,21 @@ class _HomePageWidgetState2 extends State<HomePageWidget2> {
 
   get height => null;
 
-    Widget ShoppingButton(){
+Widget ShoppingButton(){
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Colors.purple.shade700,
-          child: Text('Shopping',style: TextStyle(color: Colors.white,fontSize: 20),),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
           onPressed: (){
-            Navigator.pushNamed(context, '/shopping');
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Shopping(),
+          ));
           },
         ),
       );
@@ -40,15 +48,22 @@ class _HomePageWidgetState2 extends State<HomePageWidget2> {
 
 Widget LoginButton(){
   return SizedBox(
-    width: 170.0,
-    height: 100.0,
-    child: RaisedButton(color: Colors.green.shade700,
-      child: Text('Login',style: TextStyle(color: Colors.white,fontSize: 25)),
-      onPressed:(){
-        Navigator.pushNamed(context, '/login');
-      },
-    ),
-  );
+        width: 170.0,
+        height: 100.0,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 108, 239, 56),
+          ),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => login(),
+          ));
+          },
+        ),
+      );
 }
 
 
@@ -56,10 +71,17 @@ Widget LoginButton(){
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Colors.orange.shade700,
-          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
-          onPressed:(){
-            Navigator.pushNamed(context, '/Setting');
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Setting(),
+          ));
           },
         ),
       );
@@ -69,13 +91,20 @@ Widget LoginButton(){
       return SizedBox(
         width: 170.0,
         height: 100.0,
-        child: RaisedButton(color: Color.fromARGB(255, 185, 42, 42),
-        child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
-        onPressed:(){
-        Navigator.pushNamed(context, '/home');
-      },
-    ),
-  );
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+          ),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          onPressed: (){
+            Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Home(),
+          ));
+          },
+        ),
+      );
 }
 
  Widget showButton(){
