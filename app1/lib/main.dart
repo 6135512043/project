@@ -3,7 +3,7 @@ import 'package:app1/login.dart';
 import 'package:app1/route.dart';
 import 'package:app1/setting.dart';
 import 'package:flutter/material.dart';
-import 'package:app1/Welcome.dart';
+import 'package:app1/welcome.dart';
 
 void main() {
   runApp(MyApp());

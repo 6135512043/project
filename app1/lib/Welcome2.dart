@@ -32,9 +32,9 @@ Widget ShoppingButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
             Navigator.pushReplacement(
           context,
@@ -52,15 +52,12 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 108, 239, 56),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Login',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => login(),
-          ));
+            Navigator.pushNamed(
+          context,'/login');
           },
         ),
       );
@@ -73,15 +70,12 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Setting(),
-          ));
+            Navigator.pushNamed(
+          context,'/setting');
           },
         ),
       );
@@ -93,9 +87,9 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
             Navigator.pushReplacement(
           context,

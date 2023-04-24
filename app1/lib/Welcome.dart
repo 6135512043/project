@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/widgets.dart';
 import 'package:app1/shopping.dart';
+import 'package:app1/route.dart';
 
 
 class HomePageWidget extends StatefulWidget {
@@ -29,15 +30,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Product',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Shopping(),
-          ));
+            Navigator.pushNamed(
+          context,'/shopping');
           },
         ),
       );
@@ -49,15 +47,12 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 16, 48, 152),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Loin',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Login',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => login(),
-          ));
+            Navigator.pushNamed(
+          context,'/login');
           },
         ),
       );
@@ -70,15 +65,12 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Setting',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Relogin(),
-          ));
+            Navigator.pushNamed(
+          context,'/relogin');
           },
         ),
       );
@@ -90,15 +82,12 @@ Widget LoginButton(){
         height: 100.0,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 139, 53, 201),
+            backgroundColor: Color.fromARGB(255, 168, 90, 224),
           ),
-          child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 20),),
+          child: Text('Logout',style: TextStyle(color: Colors.white,fontSize: 25),),
           onPressed: (){
-            Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Relogin(),
-          ));
+            Navigator.pushNamed(
+          context,'/relogin');
           },
         ),
       );

@@ -1,4 +1,4 @@
-import 'package:app1/Welcome.dart';
+import 'package:app1/welcome.dart';
 import 'package:app1/Welcome2.dart';
 import 'package:app1/home.dart';
 import 'package:app1/register.dart';
@@ -8,7 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:app1/Welcome2.dart';
+import 'package:app1/route.dart';
 
 class login extends StatefulWidget {
   const login({ Key? key }) : super(key: key);
@@ -49,7 +49,8 @@ class _loginState extends State<login> {
                       padding: EdgeInsets.all(50.0),
                       child: Form(
                           key: _formKey,
-                          child: Column(children: [
+                          child: Column(
+                            children: [
                             Image.network(
                               "https://cdn-icons-png.flaticon.com/512/4213/4213147.png",
                               height: 200,
