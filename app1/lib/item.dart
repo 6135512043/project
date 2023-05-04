@@ -1,4 +1,5 @@
 import 'package:app1/home.dart';
+import 'package:app1/item2.dart';
 import 'package:app1/models/item_model.dart';
 import 'package:app1/shopping.dart';
 import 'package:app1/welcome.dart';
@@ -23,12 +24,12 @@ class _ShowmodelState extends State<Showmodel> {
 
   Future<void> _launcherURL(String url) async {
     final Uri uri = Uri.parse(model!.urlitem);
-    if(!await launchUrl(
+    if (!await launchUrl(
       uri,
       mode: LaunchMode.externalApplication,
-      )){
-        throw "Can not launch url";
-      }
+    )) {
+      throw "Can not launch url";
+    }
   }
 
   ItemModel? model;
@@ -52,65 +53,97 @@ class _ShowmodelState extends State<Showmodel> {
         ),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: Center(
+            child: Expanded(
+          child: SingleChildScrollView(
             child: Column(
-          children: <Widget>[
-            SizedBox(
-              width: 200,
-              height: 20,
-            ),
-            const Text(' '),
-            _controller.value.isInitialized
-                ? AspectRatio(
-                    aspectRatio: _controller.value.aspectRatio,
-                    child: VideoPlayer(_controller),
-                  )
-                : Container(),
-            SizedBox(
-              width: 200,
-              height: 0,
-            ),
-            move(),
-            SizedBox(
-              width: 200,
-              height: 30,
-            ),
-            Center(
-                child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                model!.comment,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Color.fromARGB(159, 0, 0, 0),
+              children: <Widget>[
+                SizedBox(
+                  width: 200,
+                  height: 20,
                 ),
-              ),
-            )),
-            SizedBox(
-              width: 200,
-              height: 10,
+                const Text(' '),
+                _controller.value.isInitialized
+                    ? AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller),
+                      )
+                    : Container(),
+                SizedBox(
+                  width: 200,
+                  height: 0,
+                ),
+                move(),
+                SizedBox(
+                  width: 200,
+                  height: 30,
+                ),
+                Center(
+                    child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    model!.comment,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(159, 0, 0, 0),
+                    ),
+                  ),
+                )),
+                SizedBox(
+                  width: 200,
+                  height: 10,
+                ),
+
+                //     Row(
+                //       mainAxisSize: MainAxisSize.min,
+                //       children: <Widget>[
+                //         ElevatedButton(
+                //           style: ElevatedButton.styleFrom(
+                //   backgroundColor: Color.fromARGB(255, 238, 84, 143),
+                // ),
+                // onTap = launchUrl(model.urlitem),
+                // onPressed: () {  },
+                // child: Text(
+                //   'Get',
+                //   style: TextStyle(color: Colors.white, fontSize: 20),
+                // ),
+                //         ),
+                //       ],
+                //     ),
+                showButton(),
+                SizedBox(
+                  width: 200,
+                  height: 30,
+                ),
+                Text(
+                  'Recommended',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(159, 0, 0, 0),
+                  ),
+                ),
+                SizedBox(
+                  width: 200,
+                  height: 20,
+                ),
+                recomment(),
+                SizedBox(
+          width: 10.0,
+          height: 30.0,
+        ),
+              ],
             ),
-
-            //     Row(
-            //       mainAxisSize: MainAxisSize.min,
-            //       children: <Widget>[
-            //         ElevatedButton(
-            //           style: ElevatedButton.styleFrom(
-            //   backgroundColor: Color.fromARGB(255, 238, 84, 143),
-            // ),
-            // onTap = launchUrl(model.urlitem),
-            // onPressed: () {  },
-            // child: Text(
-            //   'Get',
-            //   style: TextStyle(color: Colors.white, fontSize: 20),
-            // ),
-            //         ),
-            //       ],
-            //     ),
-
-            showButton(),
-          ],
+          ),
         )),
+        // Text(
+        //       'Recommended',
+        //       style: TextStyle(
+        //         fontSize: 20,
+        //         fontWeight: FontWeight.w500,
+        //         color: Color.fromARGB(159, 0, 0, 0),
+        //       ),
+        //     ),
 
         // floatingActionButton: FloatingActionButton(
         //   hoverColor: Color.fromARGB(255, 230, 83, 240),focusColor: Color.fromARGB(255, 230, 83, 240),
@@ -160,17 +193,143 @@ class _ShowmodelState extends State<Showmodel> {
     );
   }
 
-  Widget skin() {
+Widget p1() {
+  return SizedBox(
+    height: 100,
+    width: 120,
+    child: ElevatedButton(
+      child: Column(
+        children: [
+          Image.network(
+            "https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/p1.png?alt=media&token=57535297-3788-4008-8f72-ec5ad2371568",
+            width: 80,
+            height: 80,
+          ),
+          Text(
+            'M short jeans',
+            style: TextStyle(fontSize: 14),
+          ),
+        ],
+      ),
+      onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => item2(
+                ),
+              ));
+              },
+      style: ElevatedButton.styleFrom(
+          primary: Color.fromARGB(255, 255, 255, 255),
+          onPrimary: Color.fromARGB(255, 0, 0, 0)),
+    ),
+  );
+}
+
+Widget p2() {
+  return SizedBox(
+    height: 100,
+    width: 120,
+    child: ElevatedButton(
+      child: Column(
+        children: [
+          Image.network(
+            "https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/p2.png?alt=media&token=be998aeb-3f5a-42c6-9f7c-3a486b910b0a",
+            width: 80,
+            height: 80,
+          ),
+          Text(
+            'Faded jeans',
+            style: TextStyle(fontSize: 15),
+          ),
+        ],
+      ),
+      onPressed: () {
+        Navigator.of(context).pushNamed('/item3',);
+      },
+      style: ElevatedButton.styleFrom(
+          primary: Color.fromARGB(255, 255, 255, 255),
+          onPrimary: Color.fromARGB(255, 0, 0, 0)),
+    ),
+  );
+}
+
+Widget p4() {
+  return SizedBox(
+    height: 100,
+    width: 120,
+    child: ElevatedButton(
+      child: Column(
+        children: [
+          Image.network(
+            "https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/p4.png?alt=media&token=f662baf9-e7a9-4658-9b6d-04f6a1764c11",
+            width: 80,
+            height: 80,
+          ),
+          Text(
+            'Skirt y2k 80s',
+            style: TextStyle(fontSize: 15),
+          ),
+        ],
+      ),
+      onPressed: () {
+        Navigator.of(context).pushNamed('/item4',);
+      },
+      style: ElevatedButton.styleFrom(
+          primary: Color.fromARGB(255, 255, 255, 255),
+          onPrimary: Color.fromARGB(255, 0, 0, 0)),
+    ),
+  );
+}
+
+Widget recomment() {
+  return Row(
+    mainAxisSize: MainAxisSize.min,
+    children: <Widget>[p1(),
+    SizedBox(
+          width: 10.0,
+          height: 50.0,
+        ),
+     p2(), 
+     SizedBox(
+          width: 10.0,
+          height: 50.0,
+        ),
+     p4(),
+     ],
+  );
+}
+
+Widget real() {
     return SizedBox(
-      width: 195.0,
+      width: 110.0,
       height: 55.0,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 247, 172, 106),
+          backgroundColor: Color.fromARGB(255, 30, 118, 33),
+        ),
+        onPressed: () {
+         Navigator.of(context).pushNamed('/realmodel',);
+        },
+        child: Text(
+          'Real model',
+          style: TextStyle(color: Colors.white, fontSize: 15),
+        ),
+      ),
+    );
+  }
+
+  Widget skin() {
+    return SizedBox(
+      width: 110.0,
+      height: 55.0,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(255, 239, 155, 83),
         ),
         child: Text(
           'Skin tones',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         onPressed: () {
           showDialog(
@@ -221,14 +380,14 @@ class _ShowmodelState extends State<Showmodel> {
 
   Widget buy() {
     return SizedBox(
-      width: 195.0,
+      width: 160.0,
       height: 55.0,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Color.fromARGB(255, 238, 84, 143),
         ),
-        onPressed: (){
-            _launcherURL(model!.urlitem);
+        onPressed: () {
+          _launcherURL(model!.urlitem);
         },
         child: Text(
           'Get',
@@ -247,8 +406,16 @@ class _ShowmodelState extends State<Showmodel> {
           width: 2.0,
           height: 30.0,
         ),
+        real(),
+        SizedBox(
+          width: 2.0,
+          height: 30.0,
+        ),
         buy()
       ],
     );
   }
 }
+
+
+

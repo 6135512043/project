@@ -42,7 +42,7 @@ class _loginState extends State<login> {
             return Scaffold(
                 appBar: AppBar(
                   backgroundColor: Color.fromARGB(255, 160, 58, 190),
-                  title: Text('LOGIN'),
+                  title: Text('Login'),
                 ),
                 body: SingleChildScrollView(
                   child: Container(

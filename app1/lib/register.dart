@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Color.fromARGB(255, 160, 58, 190),
-                title: Text('REGISTER'),
+                title: Text('Register'),
               ),
               body: SingleChildScrollView(
                 child: Container(

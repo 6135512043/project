@@ -8,21 +8,21 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:video_player/video_player.dart';
 import 'package:app1/route.dart';
 
-class item2 extends StatefulWidget {
-  item2({Key? key}) : super(key: key);
+class item4 extends StatefulWidget {
+  item4({Key? key}) : super(key: key);
 
   @override
-  _item2State createState() => _item2State();
+  _item4State createState() => _item4State();
 }
 
-class _item2State extends State<item2> {
+class _item4State extends State<item4> {
   late VideoPlayerController _controller;
 
   @override
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-        'https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/vrecommentp1.mp4?alt=media&token=133b6d21-2285-4769-832c-5c1f68944de7')
+        'https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/vrecommentp4.mp4?alt=media&token=34bdf3be-1930-451b-ba85-0bc6d357327e')
       ..initialize().then((_) {
         setState(() {});
       });
@@ -33,7 +33,7 @@ class _item2State extends State<item2> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('M short jeans'),
+          title: Text('Skirt y2k 80s'),
           backgroundColor: Color.fromARGB(255, 160, 58, 190),
         ),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -63,7 +63,7 @@ class _item2State extends State<item2> {
                 Center(
                     child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Text('Short jeans Matte with a white shirt. Wear it and look comfortable every day that you have worn it.'
+                  child: Text('An 80s skirt that goes well with any shirt. Especially this white shirt.'
                     ,
                     style: TextStyle(
                       fontSize: 20,
@@ -153,7 +153,7 @@ class _item2State extends State<item2> {
                         color: Color.fromARGB(222, 1, 2, 4),
                       ),
                     ),
-                    content: Image.network('https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/skin_mix1.png?alt=media&token=edc344da-9035-47ff-ba10-a77ec782a4e6'),
+                    content: Image.network('https://firebasestorage.googleapis.com/v0/b/project-90bb1.appspot.com/o/skin_mix3.png?alt=media&token=ec61afc0-08a6-467a-9d86-e6d516a401c0'),
                     actions: [
                       SizedBox(
                         width: 300,
